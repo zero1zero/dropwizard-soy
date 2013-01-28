@@ -1,4 +1,4 @@
-dropwizard-soy
+Dropwizard Soy Integration
 ==============
 
-Soy template integration with Dropwizard
+Documentation on it's way shortly

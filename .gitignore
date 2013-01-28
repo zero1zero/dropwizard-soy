@@ -1,6 +1,8 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+core/lib/unzipped
+core/lib/com/google/template/soy/2012-12-21/soy-2012-12-21.jar
+.idea
+.DS_Store
+**/.DS_Store
+**/target
+*.iml
+**/*.iml
