@@ -31,8 +31,6 @@
             <version>0.9.8</version>
         </dependency>
 
-        <!-- I want to annotate classes to be wired into a container if that's how they wish to be used -->
-
         <!--
             Since google has not contributed the compiler to central, bin/get-soy.sh needs to be run to pull it in.
             https://code.google.com/p/closure-templates/issues/detail?id=7
