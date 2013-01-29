@@ -9,7 +9,7 @@ from within a [dropwizard](http://dropwizard.codahale.com/) project.
 This project does not depend on the Dropwizard view libraries as they are explicity tied to freemarker and mustache.
 
 The Dropwizard view module code was not in a place where different rendering implementations could be added cleanly, thus,
-there is a nominal amount of duplicated code here ([a discussion on the topic](https://groups.google.com/forum/?fromgroups=#!searchin/dropwizard-user/soy/dropwizard-user/WXN-Pc9FUps/8tJ_n_-6uuQJ).
+there is a nominal amount of duplicated code here ([a discussion on the topic](https://groups.google.com/forum/?fromgroups=#!searchin/dropwizard-user/soy/dropwizard-user/WXN-Pc9FUps/8tJ_n_-6uuQJ)).
 
 Features
 --------------
