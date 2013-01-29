@@ -3,22 +3,33 @@ Dropwizard Soy Integration
 
 Intro
 --------------
-This project is aimed to provide support for rendering [soy](https://developers.google.com/closure/templates) templates from [dropwizard](http://dropwizard.codahale.com/)
+This project is aimed to provide support for rendering [soy](https://developers.google.com/closure/templates) templates
+from within a [dropwizard](http://dropwizard.codahale.com/) project.
+
+This project does not depend on the Dropwizard view libraries as they are explicity tied to freemarker and mustache.
+
+The Dropwizard view module code was not in a place where different rendering implementations could be added cleanly, thus,
+there is a nominal amount of duplicated code here ([a discussion on the topic](https://groups.google.com/forum/?fromgroups=#!searchin/dropwizard-user/soy/dropwizard-user/WXN-Pc9FUps/8tJ_n_-6uuQJ).
+
+Features
+--------------
+* Realtime template compilation on change when developing locally (ie, when not running from shaded jar)
 
 How to Use
 --------------
 * Build and install the parent module
 * Include the following snippet in the pom of your dropwizard project:
-    ```
+    ```xml
         <dependency>
             <groupId>com.github.dwsoy</groupId>
             <artifactId>core</artifactId>
-            <version>${parent.version}</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     ```
-* Add the [SoyViewBundle](https://github.com/zero1zero/dropwizard-soy/blob/master/core/src/main/java/com/github/dwsoy/view/SoyViewBundle.java) to your bootstrap
-* Add soy files under "soy" in your classpath (this is configurable)
-* Return SoyView objects from your resources
+* Instantiate and add a [SoyViewBundle](https://github.com/zero1zero/dropwizard-soy/blob/master/core/src/main/java/com/github/dwsoy/view/SoyViewBundle.java)
+to your bootstrap
+* Add soy files under "soy" in your classpath (this is configurable).  Preferred location would be under src/main/resources/soy.
+* Return SoyView objects from your resources to render templates.
 
 
 TODO

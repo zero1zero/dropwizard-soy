@@ -5,7 +5,6 @@ import com.github.dwsoy.reload.SoyFileAlterationListener;
 import com.github.dwsoy.reload.SoyFileAlterationObserver;
 import com.google.template.soy.SoyFileSet;
 import com.google.template.soy.tofu.SoyTofu;
-import com.sun.tools.javac.util.Assert;
 import org.reflections.Reflections;
 import org.reflections.scanners.ResourcesScanner;
 import org.reflections.util.ClasspathHelper;
@@ -14,7 +13,7 @@ import org.reflections.util.ConfigurationBuilder;
 import javax.inject.Singleton;
 import java.io.File;
 import java.net.URL;
-import java.util.*;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 @Singleton
@@ -25,6 +24,7 @@ public class SoyCompiler {
     @SuppressWarnings("unused")
     private SoyFileAlterationObserver fileAlterationObserver;
 
+    private File soyDir;
     private SoyTofu tofu;
 
     public SoyCompiler(SoyCompilerConfiguration soyCompilerConfiguration) {
@@ -38,10 +38,7 @@ public class SoyCompiler {
 
         compileAll();
 
-        File soyDir = new File(soyDirURL.getPath());
-        if (soyDir.exists()) {
-            this.fileAlterationObserver = new SoyFileAlterationObserver(soyDir, new SoyFileAlterationListener(this));
-        }
+        this.soyDir = new File(soyDirURL.getPath());
     }
 
     public void compileAll() {
@@ -61,11 +58,15 @@ public class SoyCompiler {
                 throw new IllegalStateException("Classpath lookup failed to find file previously discovered by reflections: " + file);
             }
 
-            builder.add(new File(fileURL.getPath()));
+            builder.add(fileURL);
         }
 
         SoyFileSet soyFileSet = builder.build();
         tofu = soyFileSet.compileToTofu();
+    }
+
+    public File getSoyDir() {
+        return soyDir;
     }
 
     public SoyTofu getTofu() {

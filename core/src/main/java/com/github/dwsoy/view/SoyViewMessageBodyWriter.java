@@ -1,6 +1,5 @@
 package com.github.dwsoy.view;
 
-import com.github.dwsoy.view.SoyView;
 import com.google.common.annotations.VisibleForTesting;
 import com.yammer.metrics.core.TimerContext;
 

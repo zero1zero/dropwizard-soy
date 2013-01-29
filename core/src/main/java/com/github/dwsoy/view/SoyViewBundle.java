@@ -4,6 +4,7 @@ import com.github.dwsoy.SoyCompiler;
 import com.github.dwsoy.SoyTemplateRepository;
 import com.github.dwsoy.config.DefaultSoyCompilerConfiguration;
 import com.github.dwsoy.config.SoyCompilerConfiguration;
+import com.github.dwsoy.reload.SoyFileAlterationObserver;
 import com.yammer.dropwizard.Bundle;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;

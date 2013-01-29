@@ -1,7 +1,6 @@
 package com.github.dwsoy.view;
 
 import com.github.dwsoy.SoyTemplateRepository;
-import com.github.dwsoy.view.SoyView;
 import com.google.inject.Inject;
 
 import javax.inject.Singleton;
