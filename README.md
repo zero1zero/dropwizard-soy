@@ -39,4 +39,4 @@ TODO
 --------------
 Javascript rendering support is not yet integrated.
 
-The best way to go about this might often depend on the end implementation of DW but I am open to suggestions
+The best way to go about this might often depend on the end implementation of DW, but I am open to suggestions
