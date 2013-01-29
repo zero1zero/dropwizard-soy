@@ -19,7 +19,7 @@ How to Use
 --------------
 * Build and install the parent module
 * Include the following snippet in the pom of your dropwizard project:
-```xml
+```
     <dependency>
         <groupId>com.github.dwsoy</groupId>
         <artifactId>core</artifactId>
