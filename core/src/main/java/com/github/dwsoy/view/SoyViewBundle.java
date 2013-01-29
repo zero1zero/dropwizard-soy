@@ -25,11 +25,12 @@ public class SoyViewBundle implements Bundle {
 
     @Override
     public void run(Environment environment) {
-        //authors note: I am a member of the IoC camp. However, I would like to keep this library and as thin as possible.
+        //author's note: I am a member of the IoC camp. However, I would like to keep this library and as thin as possible.
         environment.addProvider(
             new SoyViewMessageBodyWriter(
                     new SoyViewRenderer(
                             new SoyTemplateRepository(
-                                    new SoyCompiler(this.soyCompilerConfiguration)))));
+                                    new SoyCompiler(this.soyCompilerConfiguration),
+                                    environment.getObjectMapperFactory()))));
     }
 }
