@@ -17,8 +17,8 @@ Features
 
 How to Use
 --------------
-* Build and install the parent module
-* Include the following snippet in the pom of your dropwizard project:
+1. Build and install the parent module
+2. Include the following snippet in the pom of your dropwizard project:
 
 ```xml
 <dependency>
@@ -28,10 +28,10 @@ How to Use
 </dependency>
 ```
 
-* Instantiate and add a [SoyViewBundle](https://github.com/zero1zero/dropwizard-soy/blob/master/core/src/main/java/com/github/dwsoy/view/SoyViewBundle.java)
+3. Instantiate and add a [SoyViewBundle](https://github.com/zero1zero/dropwizard-soy/blob/master/core/src/main/java/com/github/dwsoy/view/SoyViewBundle.java)
 to your bootstrap
-* Add soy files under "soy" in your classpath (this is configurable).  Preferred location would be under src/main/resources/soy.
-* Return SoyView objects from your resources to render templates.
+4. Add soy files under "soy" in your classpath (this is configurable).  Preferred location would be under src/main/resources/soy.
+5. Return SoyView objects from your resources to render templates.
 
 
 TODO
