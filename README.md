@@ -19,6 +19,7 @@ How to Use
 --------------
 * Build and install the parent module
 * Include the following snippet in the pom of your dropwizard project:
+
 ```xml
 <dependency>
   <groupId>com.github.dwsoy</groupId>
@@ -26,6 +27,7 @@ How to Use
   <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
+
 * Instantiate and add a [SoyViewBundle](https://github.com/zero1zero/dropwizard-soy/blob/master/core/src/main/java/com/github/dwsoy/view/SoyViewBundle.java)
 to your bootstrap
 * Add soy files under "soy" in your classpath (this is configurable).  Preferred location would be under src/main/resources/soy.
