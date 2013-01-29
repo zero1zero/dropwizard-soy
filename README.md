@@ -18,16 +18,14 @@ Features
 How to Use
 --------------
 1. Build and install the parent module
-2. Include the following snippet in the pom of your dropwizard project:
-
-```xml
-<dependency>
-  <groupId>com.github.dwsoy</groupId>
-  <artifactId>core</artifactId>
-  <version>1.0-SNAPSHOT</version>
-</dependency>
-```
-
+2. Include the core module as a maven dependency
+    ```xml
+    <dependency>
+      <groupId>com.github.dwsoy</groupId>
+      <artifactId>core</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    ```
 3. Instantiate and add a [SoyViewBundle](https://github.com/zero1zero/dropwizard-soy/blob/master/core/src/main/java/com/github/dwsoy/view/SoyViewBundle.java)
 to your bootstrap
 4. Add soy files under "soy" in your classpath (this is configurable).  Preferred location would be under src/main/resources/soy.
